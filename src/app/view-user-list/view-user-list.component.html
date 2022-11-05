@@ -1,0 +1,40 @@
+<header>
+    <div class="p-5 text-center bg-light">
+      <h1 class="mb-3">User list</h1>
+      <a class="btn btn-primary" (click)="openAddNewUser()" role="button">Add new user</a>
+    </div>
+  </header>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Username</th>
+        <th scope="col">Password</th>
+        <th scope="col">Email</th>
+        <th scope="col">Status</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">i</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+        <td>@mdo</td>
+        <td>@mdo</td>
+        <td>@mdo</td>
+        <td>
+          <img title = "Edit" class="icon-style" [src]="'assets/svg/pencil.svg'" (click)="openEdit()">
+          <img title = "Assign permission" class="icon-style" [src]="'assets/svg/assign.svg'" (click)="openAssignPermissions()">
+          <img title = "Delete" class="icon-style" [src]="'assets/svg/trash.svg'" (click)="delete(1)">
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
+  
+  

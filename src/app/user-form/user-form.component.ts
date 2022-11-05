@@ -3,11 +3,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-add-new-user',
-  templateUrl: './add-new-user.component.html',
-  styleUrls: ['./add-new-user.component.css']
+  selector: 'app-user-form',
+  templateUrl: './user-form.component.html',
+  styleUrls: ['./user-form.component.css']
 })
-export class AddNewUserComponent implements OnInit {
+export class UserFormComponent implements OnInit {
 
   public newUserFormGroup: FormGroup;
   public formBuilder: FormBuilder;
