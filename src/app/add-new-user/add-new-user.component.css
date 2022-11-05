@@ -1,0 +1,15 @@
+.backButton {
+    border:none;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.newUserFormGroup {
+    display: grid;
+    margin: auto;
+    width: 70%;
+}
+
+.submitButton {
+    margin: auto;
+}
