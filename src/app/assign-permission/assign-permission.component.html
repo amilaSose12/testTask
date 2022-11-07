@@ -1,8 +1,27 @@
 
-<button class="backButton" (click)="returnBack()">Back</button>
-
 <header>
     <div class="p-5 text-center bg-light">
+        <button class="btn btn-primary buttonStyle" (click)="returnBack()">Back</button>
         <h1 class="mb-3">Assign permissions to user</h1>
+        <p class="mb-3">{{user?.firstName}} {{user?.lastName}}, {{user?.email}}</p>
     </div>
 </header>
+
+<div class="permissionsDropdown" [formGroup]="newPermissionFormGroup">
+    <select class="form-control" formControlName="code">
+        <option value="" selected>Choose Permission</option>
+        <option *ngFor="let permission of permissions; let i=index" value={{permission.id}}> {{permission.code}} - {{permission.description}} </option>
+    </select>
+</div>
+
+
+
+
+
+<div class="d-flex justify-content-center">
+    <button type="submit" class="btn btn-default buttonStyle" [disabled]="!isSelected"  (click)="onSubmit()">Submit</button>
+</div>
+
+<div *ngIf="showBox" id="box" class="savedDeletedBox">
+    <p class="savedDeletedMessage">  {{ 'Permission successfully added!' }}</p>
+</div>

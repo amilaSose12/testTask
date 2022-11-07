@@ -7,18 +7,23 @@ import { AssignPermissionComponent } from './assign-permission/assign-permission
 import { ReactiveFormsModule } from '@angular/forms';
 import { ViewUserListComponent } from './view-user-list/view-user-list.component';
 import { UserFormComponent } from './user-form/user-form.component';
+import { PageSwitcherComponent } from './page-switcher/page-switcher.component';
+
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     AssignPermissionComponent,
     UserFormComponent,
-    ViewUserListComponent
+    ViewUserListComponent,
+    PageSwitcherComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

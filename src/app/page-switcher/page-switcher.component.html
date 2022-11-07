@@ -1,0 +1,15 @@
+<div class="page-switcher" *ngIf="page && maxPage && maxPage > 1">
+    <div class="page-switcher-wrapper">
+      <div *ngIf="page !== 1" (click)="clickPageChange(page - 1)">
+        <span >{{ 'Previous' }}</span>
+      </div>
+      <div>
+        <span (click)="clickPageChange(possiblePage)" *ngFor="let possiblePage of visiblePages" [ngClass]="{ active: page === possiblePage }">
+          {{ possiblePage }}
+        </span>
+      </div>
+      <div *ngIf="page !== maxPage"(click)="clickPageChange(page + 1)">
+        <span>{{ 'Next' }}</span>
+      </div>
+    </div>
+  </div>

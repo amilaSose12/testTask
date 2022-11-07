@@ -9,10 +9,7 @@ const routes: Routes = [
   {path: '', component: ViewUserListComponent},
   
   {path: 'assignPermissions', component: AssignPermissionComponent},
-  {path: 'addNewUser', component: UserFormComponent},
-  {path: 'edit', component: UserFormComponent}
-
-
+  {path: 'userForm', component: UserFormComponent},
 ];
 
 @NgModule({
